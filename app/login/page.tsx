@@ -6,7 +6,6 @@ import { createClient } from "@/lib/supabase";
 
 export default function LoginPage() {
   const router = useRouter();
-  const supabase = createClient();
 
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
@@ -18,6 +17,8 @@ export default function LoginPage() {
 
     setError("");
     setCargando(true);
+
+    const supabase = createClient();
 
     const { error } = await supabase.auth.signInWithPassword({
       email: correo,
@@ -111,7 +112,9 @@ export default function LoginPage() {
               disabled={cargando}
               className="w-full bg-pink-600 text-white py-3 rounded-xl font-bold hover:bg-pink-700 active:scale-[0.98] transition shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {cargando ? "⏳ Iniciando sesión..." : "🔐 Iniciar sesión"}
+              {cargando
+                ? "⏳ Iniciando sesión..."
+                : "🔐 Iniciar sesión"}
             </button>
           </form>
         </div>
