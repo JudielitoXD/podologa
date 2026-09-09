@@ -79,7 +79,6 @@ const contactoPorDefecto: ContenidoContacto = {
 };
 
 export default function Home() {
-  const supabase = createClient();
 
   // ==============================
   // CONTENIDO DESDE SUPABASE
@@ -140,6 +139,8 @@ export default function Home() {
     let activo = true;
 
     const cargarContenido = async () => {
+      const supabase = createClient();
+
       try {
         // ==========================
         // SITE CONTENT
@@ -262,6 +263,8 @@ export default function Home() {
     // ==========================
 
     const cargarHorarios = async () => {
+      const supabase = createClient();
+
       try {
         const { data, error } = await supabase
           .from("horarios")
@@ -565,6 +568,8 @@ export default function Home() {
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
+
+    const supabase = createClient();
 
     if (enviandoCita) {
       return;
