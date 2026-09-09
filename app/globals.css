@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* ================= ANIMACIONES DE HUSEY ================= */
+
+@keyframes aparecerArriba {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aparecerSuave {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animacion-subir {
+  animation: aparecerArriba 0.8s ease-out both;
+}
+
+.animacion-subir-lenta {
+  animation: aparecerArriba 1s ease-out 0.2s both;
+}
+
+.animacion-subir-mas-lenta {
+  animation: aparecerArriba 1s ease-out 0.4s both;
+}
+
+.animacion-botones {
+  animation: aparecerArriba 1s ease-out 0.6s both;
+}
+
+.animacion-suave {
+  animation: aparecerSuave 1.2s ease-out both;
+}
+
+.boton-husey {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.boton-husey:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.boton-husey:active {
+  transform: scale(0.96);
+}
