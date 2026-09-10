@@ -1291,13 +1291,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold mb-2">
-                Facebook
-              </h3>
-
-              <p className="text-gray-500 text-sm">
-                Próximamente agregaremos nuestra página.
-              </p>
+             
             </div>
 
             <div className="group bg-white rounded-3xl shadow-md p-7 text-center hover:shadow-xl hover:-translate-y-2 transition duration-300">
@@ -1307,13 +1301,6 @@ export default function Home() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold mb-2">
-                Instagram
-              </h3>
-
-              <p className="text-gray-500 text-sm">
-                Próximamente agregaremos nuestro perfil.
-              </p>
             </div>
           </div>
 
