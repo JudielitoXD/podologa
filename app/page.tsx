@@ -1219,6 +1219,7 @@ export default function Home() {
         </div>
       </section>
 
+      ```tsx
       {/* ================================= */}
       {/* CONTACTO */}
       {/* ================================= */}
@@ -1243,7 +1244,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <a
               href={`https://wa.me/${whatsappNumero}`}
               target="_blank"
@@ -1283,25 +1284,6 @@ export default function Home() {
                 Comunícate directamente con nosotros
               </p>
             </a>
-
-            <div className="group bg-white rounded-3xl shadow-md p-7 text-center hover:shadow-xl hover:-translate-y-2 transition duration-300">
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-blue-100 flex items-center justify-center mb-5">
-                <span className="text-3xl">
-                  📘
-                </span>
-              </div>
-
-             
-            </div>
-
-            <div className="group bg-white rounded-3xl shadow-md p-7 text-center hover:shadow-xl hover:-translate-y-2 transition duration-300">
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-pink-100 flex items-center justify-center mb-5">
-                <span className="text-3xl">
-                  📸
-                </span>
-              </div>
-
-            </div>
           </div>
 
           <div className="mt-8 bg-white rounded-3xl shadow-md p-8 text-center">
@@ -1321,6 +1303,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+```
 
       {/* ================================= */}
       {/* AGENDAR CITA */}
